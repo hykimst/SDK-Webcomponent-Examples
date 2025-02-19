@@ -1,8 +1,8 @@
-# web-component-examples
+# SDK-Webcomponent-Examples
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/hyk-matterport/web-component-examples)
 
-*NOTE* 
+**NOTE** 
 Run `npm run build`
 - yarn install: This command installs all the project's dependencies listed in the package.json file. If you're using npm, the equivalent would be npm install. 
 - tsc: This command runs the TypeScript compiler (tsc). It takes your TypeScript code (.ts or .tsx files) and compiles it into JavaScript code (.js files) that browsers can understand.
