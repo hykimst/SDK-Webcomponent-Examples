@@ -1,4 +1,4 @@
-import { LOG, DEBUG, ERROR } from './printer';
+import { LOG, DEBUG, ERROR } from '../printer';
 
 export const registerTexture = async (sdk: any) => {
   LOG('onShowcaseLoaded', sdk);
