@@ -16,6 +16,11 @@ Then, it will run `postinstall`
 
 At last run `npm run dev` which will start the project.
 
+**Asset Register Texture**
+
+<img width="400" alt="happy-face-register-texture" src="https://github.com/user-attachments/assets/ca2d68e8-3e35-4a2a-89aa-0241a81293e0" />
+
+
 
 **SpyEvent Example**
 
