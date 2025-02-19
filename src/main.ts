@@ -1,24 +1,33 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+// Import Matterport WebComponent SDK
+import '@matterport/webcomponent';
+import { registerTexture } from './myTexture';
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// Model ID
+const modelSid = 'SxQL3iGyoDo';
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// Matterport SDK Key for testing
+const MATTPORT_TEST_SDK_KEY = 'yxszifc05b1bidcsqfr60806d';
+
+// Start main
+const main = async () => {
+  // Grab Matterport Viewer
+  const viewer = document.querySelector('matterport-viewer');
+  // Set Model Id here
+  viewer?.setAttribute('m', modelSid);
+  // Pass your SDK key here
+  viewer?.setAttribute('application-key', MATTPORT_TEST_SDK_KEY);
+  // Set your assets folder path here + Matterport assets together
+  viewer?.setAttribute('asset-base', 'assets');
+  // Initialize SDK here
+  viewer?.addEventListener('mpSdkPlaying', async (evt: any) => {
+    const mpSdk = evt.detail.mpSdk;
+
+    // Register Texture Example
+    registerTexture(mpSdk);
+
+    // Register Texture Example
+  });
+};
+
+// IF Main fails, log error here
+main().catch((err) => console.error('Error:', err));
