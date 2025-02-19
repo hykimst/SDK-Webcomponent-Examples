@@ -12,3 +12,9 @@ Then, it will run `postinstall`
 - yarn matterport-assets public/assets: which install Matterport assets in the `public/assets` folder.
 
 At last run `npm run dev` which will start the project.
+
+
+**SpyEvent Example**
+
+![spyevent_click_example_screenshot](https://github.com/user-attachments/assets/9ff6cea4-358f-4da3-a540-2e1f3663503c)
+
