@@ -4,11 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SDK Webcomponent + Vite + TS </title>
+    <style>
+      .container {
+        display: flex; /* Enable flexbox on the container */
+        width: 100%; /* Or a specific width */
+      }
+      #app {
+        flex: 2; /* Takes 3 part of the available space */
+      }
+      #logs {
+        flex: 1; /* Takes 1 part of the available space */
+      }
+    </style>
   </head>
 
   <body>
-    <matterport-viewer id="app"></matterport-viewer>
-    <script type="module" src="./src/main.ts"></script>
-    <script type="module" src="./src/index.ts"></script>
+    <div class="container">
+      <div id="app">
+        <matterport-viewer/>
+        <script type="module" src="./src/main.ts"></script>
+      </div>
+      <div id="logs">
+        <h3>LOGS</h3>
+        <p><strong>NOTE:</strong> you can add your ad tracker here </p>
+      </div>
+    </div>
   </body>
 </html>

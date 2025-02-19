@@ -59,7 +59,7 @@ export const registerTexture = async (sdk: any) => {
     // change the icon of the Tag using the id used in a previous `Asset.registerTexture` call
     DEBUG(`TAG ID: ${tagId}`, null);
     sdk.Tag.editIcon(tagId, 'texturetest1');
-    sdk.Tag.open(tagId);
+    // sdk.Tag.open(tagId);
     
   } catch (e) {
     ERROR(`Error getting model data:`, e);
