@@ -60,9 +60,7 @@ export const registerTexture = async (sdk: any) => {
     DEBUG(`TAG ID: ${tagId}`, null);
     sdk.Tag.editIcon(tagId, 'texturetest1');
     sdk.Tag.open(tagId);
-
-    const modelData = await sdk.Model.getData();
-    LOG('Model sid:', modelData.sid);
+    
   } catch (e) {
     ERROR(`Error getting model data:`, e);
   }

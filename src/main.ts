@@ -1,6 +1,7 @@
 // Import Matterport WebComponent SDK
 import '@matterport/webcomponent';
 import { registerTexture } from './myTexture';
+import { addSpies } from './SpyExample/addSpies';
 
 // Model ID
 const modelSid = 'SxQL3iGyoDo';
@@ -25,7 +26,8 @@ const main = async () => {
     // Register Texture Example
     registerTexture(mpSdk);
 
-    // Register Texture Example
+    // Spy Example
+    addSpies(mpSdk);
   });
 };
 
