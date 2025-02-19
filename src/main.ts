@@ -1,6 +1,6 @@
 // Import Matterport WebComponent SDK
 import '@matterport/webcomponent';
-import { registerTexture } from './myTexture';
+import { registerTexture } from './RegisterTextureExample/myTexture';
 import { addSpies } from './SpyExample/addSpies';
 
 // Model ID

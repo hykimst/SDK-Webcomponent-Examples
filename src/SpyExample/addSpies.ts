@@ -74,12 +74,12 @@ export async function addSpies(mpSdk:any, logElement: HTMLElement|null){
     gltfcomponent,
     'INTERACTION.CLICK'
   );
+  // OPTION 1 - bind these two OR look at OPTION 2 
   const clickComponentEventPath = node.addComponent('clickListener');
-  const emitPath = sceneObject.addEmitPath(
-    clickComponentEventPath,
-    'clicked'
-  );
-  // OPTION 1 - bind these two or 
+  // const emitPath = sceneObject.addEmitPath(
+  //   clickComponentEventPath,
+  //   'clicked'
+  // );
   // sceneObject.bindPath(clickComponentEventPath, emitPath);
   
   // 6 - Add SpyEvent (OPTION 2) bind to a spy event
